@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+加密传后端，后端解密
+<button id="jiami" onclick="tijiao()">加密传后端</button>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jsencrypt/3.0.0-rc.1/jsencrypt.js"></script>
+<script>
+    var PUBLIC_KEY = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAobhGH4WMwMvJRUlTxWrCVIOQtsHijAxPJNvAWAgq80ADpFEWrpbcGB9cKqp6XHRH4k/CVtCUZ7jm9UKwhaeAm18sKtcwe+M8JFNX6FSHpgde0o8C9S/QpcmLxf4iN7nGZ7P3ZTvMdmKUcdRMsVQnsydG2Bj6gRxP2+kexEebTeODbdM7dHlkxAL0RxGWmX/ZOBzsoWZw2gKcC0vxwyIZBGHUdImG2T3nEA+VMfK2Yqv3uSYukmlKP+0mjfhrTtLFDuTV1VER9BfryBMvpQCxLO4pqgZnXPd+SOQcZHZ2OL0wqo5OX1+GPYx7TNxz5Qi76pK//T2mH7s6X/BuyT21HQIDAQAB';
+
+    /**
+     * 加密方法
+     * @returns {PromiseLike<ArrayBuffer>}
+     * @constructor
+     */
+    function RSA_encryption(jsonData) {
+        var encrypt = new JSEncrypt();
+        encrypt.setPublicKey('-----BEGIN PUBLIC KEY-----' + PUBLIC_KEY + '-----END PUBLIC KEY-----');
+        var encrypted = encrypt.encrypt(JSON.stringify(jsonData));
+        console.log('加密前数据:%o', jsonData);
+        console.log('加密后数据:%o', encrypted);
+        return encrypted;
+    }
+
+    /**
+     * 提交方法
+     */
+    function tijiao() {
+        var str = {
+            "name":"1223334",
+            "password":"asd",
+            age:1
+        };
+            $.ajax({
+                url: "/decryption",
+                type : "POST",
+                contentType: "application/json;charset=utf-8",
+                data : RSA_encryption(str) ,
+                success : function(data) {
+                    alert(data);
+                }
+            })
+    }
+
+
+</script>
+</body>
+</html>

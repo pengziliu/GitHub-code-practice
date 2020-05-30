@@ -1,0 +1,45 @@
+rsa:
+  encrypt:
+    open: true # 是否开启加密 true  or  false
+    showLog: true # 是否打印加解密log true  or  false
+    publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAobhGH4WMwMvJRUlTxWrCVIOQtsHijAxPJNvAWAgq80ADpFEWrpbcGB9cKqp6XHRH4k/CVtCUZ7jm9UKwhaeAm18sKtcwe+M8JFNX6FSHpgde0o8C9S/QpcmLxf4iN7nGZ7P3ZTvMdmKUcdRMsVQnsydG2Bj6gRxP2+kexEebTeODbdM7dHlkxAL0RxGWmX/ZOBzsoWZw2gKcC0vxwyIZBGHUdImG2T3nEA+VMfK2Yqv3uSYukmlKP+0mjfhrTtLFDuTV1VER9BfryBMvpQCxLO4pqgZnXPd+SOQcZHZ2OL0wqo5OX1+GPYx7TNxz5Qi76pK//T2mH7s6X/BuyT21HQIDAQAB # RSA公钥
+    privateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQChuEYfhYzAy8lFSVPFasJUg5C2weKMDE8k28BYCCrzQAOkURaultwYH1wqqnpcdEfiT8JW0JRnuOb1QrCFp4CbXywq1zB74zwkU1foVIemB17SjwL1L9ClyYvF/iI3ucZns/dlO8x2YpRx1EyxVCezJ0bYGPqBHE/b6R7ER5tN44Nt0zt0eWTEAvRHEZaZf9k4HOyhZnDaApwLS/HDIhkEYdR0iYbZPecQD5Ux8rZiq/e5Ji6SaUo/7SaN+GtO0sUO5NXVURH0F+vIEy+lALEs7imqBmdc935I5BxkdnY4vTCqjk5fX4Y9jHtM3HPlCLvqkr/9PaYfuzpf8G7JPbUdAgMBAAECggEAZM1J2EgUTfA4SpnEP5+l9av0PhZoMcdSZbUcFUMyEmFqY7evna+nDNovRuDwWESasfPpPNfSSTy1qVaiVQztWutdym5LaE1hpXrVpplZ3CFn93Lw8weU1GHmX8liZr3Db8x7fnxhm8EiqjkcfMPp4v+uZvBa5LNTC84pQUspAMi5R5FaTf9TkjlxCPieX48lWlZ+VcQmfDC+2g2YQUGM0Cme5054Z6ln3XCVfYYtdoRBRkWnitVrSL+uszjybKENzw/zyoHyQeU0S2hrvNMjRXyzUVsBChzzsoGOv5w9DzkivGuko/Afict2b3+7lhf/vkvjfJ4PqWo/tLRmsXomQQKBgQDrLZfVe7BfYQjN5n+gLGDF5xFfnpgWp5nxt1ckJ/IafVyK/6OhyqmFLuZ3zj6uOVi4rX4zvsT0uB9pl++skXSMYRC313iCBZBecqlJ5cy7ojJKVJRdj70eDmJNg4rDfSjgZVWQCF36Ysyeuar1tpi/0Covbj2Ivsf6/f3kcjl+6QKBgQCwCbgb6hxSi/F+aTusJpKK1z51VU/mDtFtfAxzxapPTwR9mncfw4d8+NV4y/kMblmNUJ+CGXX/FbQl2X9KZ6qJPqGmux5OqE6JB+A+4ONRJYMgoj/tHh7Nk1muFU4iIqE/oOP1jaKurGs1NP1CIjt1DRZlNsqYIvv9MuujW5xsFQKBgQCg9SVz0SHXRZw2/8jdoUHicNEtNmg1KSRtkOOtNUG365DI+UnO09vN8Vl/KcMwjsMwMl2roKdALjwhkwFQhITWByDgEjLCGnjCi4tdrk+/I7VztguNNXFj/sg88Qip3yF44yH6YB+h3Lja8YwWe5Bzx074A2VOD/Tiza9VCPBc8QKBgAXcbPrQ8px0+FdjHY9/wUVKIVQ6wOxB9gsVJDz+icsWMGoWKH0wP2STzFe3QtV9HxIrawQj4N/bUyIneat6hB0JrswkUr//ro21a2vshOUAwLrnbAVzCUeC7mtzXiSYzpGVw8E7M/1o1DDzULNQ/HXLN8Gq71fdYlJtzZakyDJ5AoGAM07wrtjfErCmSX3K3Jys9+2mfWiUy/XxM8UWaZq6mx416X6J+m9fruObf7cqZMOthirF3FqLidMcImujnE9LgKj7wBfSTmxQelEyU4RY9xyVC37xmtKpVh2BQGsTCrZWIiqjJggalayQSTht1HEe/Xf/kQvshu0+m484M2FmFnw= # RSA私钥
+#tomcat config
+server :
+  port : 8080
+  ##项目名字配置
+  #servlet :
+  #  context-path : /demo
+  tomcat :
+    threads-max : 128
+    threads-min-spare : 5
+    uri-encoding : UTF-8
+    max-connections: 200000
+    max-http-from-post-size: 9000000
+spring :
+  servlet:
+    multipart:
+      #设置总上传的数据大小
+      max-request-size: 100MB
+      #单个文件大小
+      maxFileSize : 30MB
+    # 服务模块
+  devtools:
+    restart:
+      # 热部署开关
+      enabled: true
+  mvc:   #静态文件
+    static-path-pattern : /static/**
+  #模板引擎
+  thymeleaf:
+    model: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    #指定编码
+    encoding: utf-8
+    #禁用缓存 默认false
+    cache: false
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
