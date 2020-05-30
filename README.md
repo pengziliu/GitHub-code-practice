@@ -8,5 +8,5 @@ GitHub就是一个金库，好的项目需要发掘，一个好的轮子能够�
 本项目是`rsa-encrypt-body-spring-boot`实战demo项目
 
 ### rsa-encrypt-body-spring-boot介绍
-
-Spring Boot接口加密，可以对返回值、参数值通过注解的方式自动加解密 。
+地址：https://gitee.com/ishuibo/rsa-encrypt-body-spring-boot
+描述 ：Spring Boot接口加密，可以对返回值、参数值通过注解的方式自动加解密 。
