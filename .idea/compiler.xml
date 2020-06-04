@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="simpleimage-demo" />
         <module name="demo" />
+        <module name="xxl-job-executor" />
       </profile>
     </annotationProcessing>
   </component>
