@@ -33,3 +33,16 @@ GitHub就是一个金库，好的项目需要发掘，一个好的轮子能够�
 描述 ：图片处理工具类，具有加水印、压缩、裁切等功能
 
 实战文章：<a href= "https://mp.weixin.qq.com/s/wGIFi7kbfnPji86gNbHuzA">Java实现图片水印+压缩So easy!</a>
+
+
+## xxl-job-demo
+
+本项目是`xxl-job`实战demo项目
+
+### xxl-job介绍
+
+地址：https://github.com/xuxueli/xxl-job
+
+描述 ：分布式定时任务使用场景
+
+实战文章：<a href= "https://mp.weixin.qq.com/s/Dmbp2PhEkDQV_l6EOtBouA">分布式定时任务xxJob的常用姿势都集齐了，So Easy!</a>
