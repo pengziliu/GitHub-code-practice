@@ -15,7 +15,6 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <packaging>jar</packaging>
 
     <properties>

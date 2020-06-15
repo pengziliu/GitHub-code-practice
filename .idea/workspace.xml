@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5521778-cf86-46b5-95b3-a7c7187e7bc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/config/ShardingAlgorithmYear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/dao/OrderItemMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/dao/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/dao/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/model/OrderExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/model/OrderExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/model/OrderItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/model/OrderItemExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/service/IOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/java/com/lzn/shardingsphere/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/resources/mybatis/OrderItemMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/main/resources/mybatis/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/main/resources/mybatis/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shardingsphere-demo/src/test/java/com/lzn/shardingsphere/ShardingsphereApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/shardingsphere-demo/src/test/java/com/lzn/shardingsphere/ShardingsphereApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xxl-conf-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xxl-conf-demo/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +45,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/simpleimage-demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -69,6 +53,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/simpleimage-demo" />
       <recent name="$PROJECT_DIR$/xxl-job-demo" />
     </key>
@@ -157,7 +142,7 @@
       <workItem from="1591775496729" duration="3148000" />
       <workItem from="1591970153882" duration="1840000" />
       <workItem from="1592183298076" duration="537000" />
-      <workItem from="1592206921864" duration="494000" />
+      <workItem from="1592206921864" duration="663000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <created>1591094129166</created>
@@ -201,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591242855531</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="分布式配置中心">
+      <created>1592218713718</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592218713718</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +216,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="upload" />
     <MESSAGE value="md描述更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="md描述更新" />
+    <MESSAGE value="分布式配置中心" />
+    <option name="LAST_COMMIT_MESSAGE" value="分布式配置中心" />
   </component>
 </project>
