@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5521778-cf86-46b5-95b3-a7c7187e7bc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xxl-conf-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xxl-conf-demo/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d5521778-cf86-46b5-95b3-a7c7187e7bc4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +138,7 @@
       <workItem from="1591775496729" duration="3148000" />
       <workItem from="1591970153882" duration="1840000" />
       <workItem from="1592183298076" duration="537000" />
-      <workItem from="1592206921864" duration="663000" />
+      <workItem from="1592206921864" duration="906000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <created>1591094129166</created>
@@ -193,7 +189,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592218713718</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="分布式配置中心">
+      <created>1592218815728</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592218815728</updated>
+    </task>
+    <task id="LOCAL-00009" summary="图片压缩，水印等处理">
+      <created>1592218883898</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1592218883898</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +227,7 @@
     <MESSAGE value="upload" />
     <MESSAGE value="md描述更新" />
     <MESSAGE value="分布式配置中心" />
-    <option name="LAST_COMMIT_MESSAGE" value="分布式配置中心" />
+    <MESSAGE value="图片压缩，水印等处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="图片压缩，水印等处理" />
   </component>
 </project>
