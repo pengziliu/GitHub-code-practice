@@ -14,3 +14,5 @@ GitHub就是一个金库，好的项目需要发掘，一个好的轮子能够�
 | `xxl-conf-demo` |[xxl-conf](https://github.com/xuxueli/xxl-conf) |分布式配置中心|[实战：开源配置中心xxl-conf](https://mp.weixin.qq.com/s/4njchboKiI0uZfzOfMyRSA)|
 | `Shardingsphere-demo` |[Shardingsphere](http://shardingsphere.apache.org/index_zh.html) |分库分表|[实战：Shardingsphere分库分表](https://mp.weixin.qq.com/s/K5rPtdTwHuXhj789TegnCA)|
 | `easyexcel-demo` |[easyexcel](https://github.com/alibaba/easyexcel) |excel操作|[没想到啊，Java操作Excel竟然这么简单！](https://mp.weixin.qq.com/s/YO8Uhq1WfLYTDTpNSOmSlA)|
+| `kaptcha-demo` |[kaptcha](https://github.com/penggle/kaptcha) |验证码登录|[实战：SpringBoot分布式验证码登录方案](https://mp.weixin.qq.com/s/433Z4B5_Yulg-edwcNYb6A)|
+| `rabbitMq-demo` |[rabbitMq](https://github.com/rabbitmq/rabbitmq-server) |rabbitMq|[实战：SpringBoot集成rabbitmq并实现延时队列](https://mp.weixin.qq.com/s/E3xlhhMGStoCQC05vZscSQ)|
