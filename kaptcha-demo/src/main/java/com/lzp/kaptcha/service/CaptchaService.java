@@ -1,7 +1,7 @@
-package com.lzp.kaptcha.service;
+package com.lzp.auth.service;
 
-import com.lzp.kaptcha.utils.RedisUtils;
-import com.lzp.kaptcha.vo.CaptchaVO;
+import com.lzp.auth.utils.RedisUtils;
+import com.lzp.auth.vo.CaptchaVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

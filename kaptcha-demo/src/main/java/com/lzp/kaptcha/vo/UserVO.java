@@ -1,4 +1,4 @@
-package com.lzp.kaptcha.vo;
+package com.lzp.auth.vo;
 
 public class UserVO {
 }

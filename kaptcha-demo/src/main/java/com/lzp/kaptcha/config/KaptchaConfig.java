@@ -1,4 +1,4 @@
-package com.lzp.kaptcha.config;
+package com.lzp.auth.config;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;

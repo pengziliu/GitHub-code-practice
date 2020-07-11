@@ -1,8 +1,8 @@
-package com.lzp.kaptcha.controller;
+package com.lzp.auth.controller;
 
-import com.lzp.kaptcha.dto.LoginDTO;
-import com.lzp.kaptcha.utils.RedisUtils;
-import com.lzp.kaptcha.vo.UserVO;
+import com.lzp.auth.dto.LoginDTO;
+import com.lzp.auth.utils.RedisUtils;
+import com.lzp.auth.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

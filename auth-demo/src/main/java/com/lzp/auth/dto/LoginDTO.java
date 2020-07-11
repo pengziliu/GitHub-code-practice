@@ -6,10 +6,6 @@ public class LoginDTO {
 
     private String pwd;
 
-    private String captchaKey;
-
-    private String captcha;
-
     public String getUserName() {
         return userName;
     }
@@ -24,21 +20,5 @@ public class LoginDTO {
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
-    }
-
-    public String getCaptchaKey() {
-        return captchaKey;
-    }
-
-    public void setCaptchaKey(String captchaKey) {
-        this.captchaKey = captchaKey;
-    }
-
-    public String getCaptcha() {
-        return captcha;
-    }
-
-    public void setCaptcha(String captcha) {
-        this.captcha = captcha;
     }
 }

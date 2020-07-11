@@ -1,8 +1,8 @@
-package com.lzp.kaptcha.controller;
+package com.lzp.auth.controller;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
-import com.lzp.kaptcha.service.CaptchaService;
-import com.lzp.kaptcha.vo.CaptchaVO;
+import com.lzp.auth.service.CaptchaService;
+import com.lzp.auth.vo.CaptchaVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
