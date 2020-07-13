@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
 
 @Service
 public class UserService {
@@ -31,16 +30,16 @@ public class UserService {
     final static String PWD = "admin";
 
 
-    public UserVO login(LoginDTO loginDTO){
+    public UserVO login(LoginDTO loginDTO) {
 
         User user = getByName(loginDTO.getUserName());
 
         //用户信息校验和查询
-        if (user == null){
+        if (user == null) {
             throw new ServiceException(ResultCodeEnum.LOGIN_FAIL);
         }
         //密码校验
-        if(!PWD.equals(loginDTO.getPwd())){
+        if (!PWD.equals(loginDTO.getPwd())) {
             throw new ServiceException(ResultCodeEnum.LOGIN_FAIL);
         }
 
@@ -59,13 +58,14 @@ public class UserService {
 
     /**
      * 通过用户名获取用户
+     *
      * @param name
      * @return
      */
-    public User getByName(String name){
+    public User getByName(String name) {
         User user = null;
-        if(USER_NAME.equals(name)){
-            user =  new User("1","张三","Aa123456");
+        if (USER_NAME.equals(name)) {
+            user = new User("1", "张三", "Aa123456");
         }
         return user;
     }
