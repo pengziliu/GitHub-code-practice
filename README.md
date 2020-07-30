@@ -16,3 +16,5 @@ GitHub就是一个金库，好的项目需要发掘，一个好的轮子能够�
 | `easyexcel-demo` |[easyexcel](https://github.com/alibaba/easyexcel) |excel操作|[没想到啊，Java操作Excel竟然这么简单！](https://mp.weixin.qq.com/s/YO8Uhq1WfLYTDTpNSOmSlA)|
 | `kaptcha-demo` |[kaptcha](https://github.com/penggle/kaptcha) |验证码登录|[实战：SpringBoot分布式验证码登录方案](https://mp.weixin.qq.com/s/433Z4B5_Yulg-edwcNYb6A)|
 | `rabbitMq-demo` |[rabbitMq](https://github.com/rabbitmq/rabbitmq-server) |rabbitMq|[实战：SpringBoot集成rabbitmq并实现延时队列](https://mp.weixin.qq.com/s/E3xlhhMGStoCQC05vZscSQ)|
+| `FastDFS-demo` |[fastdfs](https://github.com/happyfish100/fastdfs) |fastdfs图片服务器api调用|[docker搭建FastDFS文件系统并集成SpringBoot](https://mp.weixin.qq.com/s/FSqv4lNz7PjmV6NH2i87DQ)|
+| `auth-demo` |[jwt](#) |jwt|[实战：十分钟实现基于JWT前后端分离的权限框架](https://mp.weixin.qq.com/s/1I4WeLU8FHxuqfv8GiHUgw)|
