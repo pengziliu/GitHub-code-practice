@@ -1,0 +1,93 @@
+.om-grid .grid-edit-view{
+	position:absolute;
+	border:2px solid #99BCE8;
+	background-color:#D3E1F1;
+	border-left-style:none;
+	border-right-style:none;
+}
+.om-grid .grid-edit-view .body-wrapper{
+	background-repeat: repeat-x;
+}
+.om-grid .grid-edit-row{
+	height:28px;
+	position:relative;
+}
+.om-grid .grid-edit-row input{
+	margin-left:1px;
+	margin-right:1px
+}
+.om-grid .gird-edit-btn{
+	padding:2px 5px;
+	border:2px solid #99BCE8;
+	position:absolute;
+	background-color:#D3E1F1;
+	border-top-style:none;
+}
+.om-grid .gird-edit-btn input{
+	width: 70px;
+	height: 24px;
+}
+.om-grid div.bDiv tr.om-grid-row td.grid-cell-dirty{
+	background-repeat: no-repeat;
+	background-image: url("images/grid-roweditor/dirty.gif");
+}
+.om-grid input.om-numberfield{
+	 background: none repeat scroll 0 0 #FFFFFF;
+	 border: 1px solid #86A3C4;
+}
+.om-grid form.grid-edit-form{
+	
+}
+.om-grid span.om-calendar , .om-grid span.om-combo{
+	border: 1px solid #86A3C4;
+	margin-left:1px;
+	margin-right:1px;
+}
+
+.om-grid span.om-combo input{
+	margin-left:0px;
+}
+
+.om-grid div.grid-edit-custom{
+	display:inline;
+	height:20px;
+	line-height:20px;
+}
+.om-grid .grid-edit-form input{
+	border:1px solid #86A3C4;
+	height:18px;
+	line-height:18px;
+	padding:1px;
+}
+.om-grid .om-calendar input , .om-grid .om-combo input{
+	border:0;
+}
+.om-grid input.grid-edit-text{
+	vertical-align: top;
+}
+.om-grid td.indexCol .om-icon{
+	background-image: url("images/grid-roweditor/new.png");	
+}
+.om-grid input.readonly-text{
+	color: #AAAAAA;
+}
+.om-grid .gird-edit-btn{
+	width:168px;
+}
+/**
+*校验相关
+**/
+.om-grid form.grid-edit-form input.error{
+	border: 1px solid red;
+	position:relative;
+}
+.om-grid div.bDiv div.errorContainer{
+	position:absolute;
+	border:1px solid red;
+	background-image:;
+	background:url("images/grid-roweditor/error.png") no-repeat scroll 0 50% #FCEFE3;
+	padding:5px 10px 5px 20px;
+	display:inline;
+	z-index:10000;
+	white-space: nowrap;
+}

@@ -1,0 +1,284 @@
+/*
+ * $Id: om-borderlayout.css,v 1.4 2012/06/25 06:48:15 licongping Exp $
+ * operamasks-ui borderlayout @VERSION
+ *
+ * Copyright 2011, AUTHORS.txt (http://ui.operamasks.org/about)
+ * Dual licensed under the MIT or LGPL Version 2 licenses.
+ * http://ui.operamasks.org/license
+ *
+ * http://ui.operamasks.org/docs/
+ */
+.om-borderlayout-resizable-helper-e { border-right: 5px solid gray; }
+.om-borderlayout-resizable-helper-w { border-left: 5px solid gray; }
+.om-borderlayout-resizable-helper-n { border-top: 5px solid gray; }
+.om-borderlayout-resizable-helper-s { border-bottom: 5px solid gray; }
+.om-borderlayout-region .om-resizable-s{
+	background-color: #E0E0E0;
+}
+.om-borderlayout-region .om-resizable-n{
+	background-color: #E0E0E0;
+}
+.om-borderlayout{
+	position: relative;
+	overflow: hidden;
+}
+.om-borderlayout .om-borderlayout-region-header .om-icon{
+	background-image: url(images/borderlayout/tools.gif);
+	width: 15px;
+	height: 15px;
+}
+.om-borderlayout .om-borderlayout-region-body{
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+.om-borderlayout-mask{
+	left:0;
+	top:0;
+	background: none repeat scroll 0 0 #FAFAFA;
+    opacity: 0.1;
+	filter:Alpha(Opacity=0.1);    
+    position: absolute;
+}
+.om-borderlayout-region{
+	position: absolute;
+	overflow: visible;
+}
+.om-borderlayout-region .om-borderlayout-region-header .om-panel-tool-close{
+	background-position: 0 0;
+}
+.om-borderlayout-region .om-borderlayout-region-header .om-panel-tool-close-hover{
+	background-position: -15px 0;
+}
+.om-borderlayout-region-south{
+	left: 0px;
+}
+.om-borderlayout-region-south .panel-tool-collapse{
+	background-position: 0 -45px;
+}
+.om-borderlayout-region-south .panel-tool-collapse-hover{
+	background-position: -15px -45px;
+}
+.om-borderlayout-region-north{
+	top: 0px;
+	left: 0px;
+}
+.om-borderlayout-region-north .panel-tool-collapse{
+	background-position: 0 -60px;
+}
+.om-borderlayout-region-north .panel-tool-collapse-hover{
+	background-position: -15px -60px;
+}
+.om-borderlayout-region-west{
+	left: 0px;
+}
+.om-borderlayout-region-west .panel-tool-collapse{
+	background-position: 0 -30px;
+}
+.om-borderlayout-region-west .panel-tool-collapse-hover{
+	background-position: -15px -30px;
+}
+.om-borderlayout-region-east{
+	right: 0px;
+}
+.om-borderlayout-region-east .panel-tool-collapse{
+	background-position: 0 -15px;
+}
+.om-borderlayout-region-east .panel-tool-collapse-hover{
+	background-position: -15px -15px;
+}
+.om-borderlayout-proxy{
+	position: absolute;
+	cursor: pointer;
+	z-index: 100;
+	display: none;
+	background-color: #E0E0E0;
+	border: 1px solid #99A8BB;
+}
+.om-borderlayout-hide-collaps-btn .om-borderlayout-trigger-proxy-west,.om-borderlayout-hide-collaps-btn .om-borderlayout-trigger-proxy-east{
+	background: none;
+	border: 0;
+} 
+.om-borderlayout .om-borderlayout-proxy .om-icon{
+	background-image: url(images/borderlayout/tools.gif);
+	width: 15px;
+	height: 15px;
+}
+.om-borderlayout-proxy-north{
+	height: 26px;
+	left: 0px;
+	top: 0px;
+}
+.om-borderlayout-proxy-north .panel-tool-expand{
+	background-position: 0 -45px;
+}
+.om-borderlayout-proxy-north .panel-tool-expand-hover{
+	background-position: -15px -45px;
+}
+.om-borderlayout-proxy-south{
+	height: 26px;
+	left: 0px;
+	bottom: 0px;
+}
+.om-borderlayout-proxy-south .panel-tool-expand{
+	background-position: 0 -60px;
+}
+.om-borderlayout-proxy-south .panel-tool-expand-hover{
+	background-position: -15px -60px;
+}
+.om-borderlayout-proxy-west{
+	left: 0px;
+	width: 26px;
+}
+.om-borderlayout-proxy-west .panel-tool-expand{
+	background-position: 0 -15px;
+}
+.om-borderlayout-proxy-west .panel-tool-expand-hover{
+	background-position: -15px -15px;
+}
+.om-borderlayout-proxy-east{
+	right: 0px;
+	width: 26px;
+}
+.om-borderlayout-proxy-east .panel-tool-expand{
+	background-position: 0 -30px;
+}
+.om-borderlayout-proxy-east .panel-tool-expand-hover{
+	background-position: -15px -30px;
+}
+
+.om-resizable-handle .om-borderlayout-collaps-trigger-west{
+	position: absolute;
+	left: 0;
+	width: 10px;
+	cursor: pointer;
+	-moz-border-radius: 0px 2px 2px 0px; 
+	-webkit-border-radius: 0px 2px 2px 0px; 
+	border-radius: 0px 2px 2px 0px;
+	top: 3px;
+	height: 35px;
+	opacity: .20;
+	filter:Alpha(Opacity=20);
+	background: url(images/borderlayout/trigger_buttons_we.png) no-repeat 1px 12px #000000;
+}
+.om-resizable-handle .om-borderlayout-collaps-trigger-west:hover{
+	opacity: 1;
+	filter:Alpha(Opacity=100);
+}
+.om-resizable-handle .om-borderlayout-collaps-trigger-east{
+	position: absolute;
+	right: 0;
+	width: 10px;
+	cursor: pointer;
+	-moz-border-radius: 2px 0px 0px 2px; 
+	-webkit-border-radius: 2px 0px 0px 2px; 
+	border-radius: 2px 0px 0px 2px;
+	top: 3px;
+	height: 35px;
+	opacity: .20;
+	filter:Alpha(Opacity=20);
+	background: url(images/borderlayout/trigger_buttons_we.png) no-repeat -10px 12px #000000;
+}
+.om-resizable-handle .om-borderlayout-collaps-trigger-east:hover{
+	opacity: 1;
+	filter:Alpha(Opacity=100);
+}
+.om-resizable-handle .om-borderlayout-collaps-trigger-north{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 42px;
+	height: 8px;
+	margin-left: -21px;
+	cursor: pointer;
+	background: url(images/borderlayout/trigger_buttons_n.png) no-repeat 0px 0px;
+}
+.om-resizable-handle .om-borderlayout-collaps-trigger-south{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 42px;
+	height: 8px;
+	margin-left: -21px;
+	cursor: pointer;
+	background: url(images/borderlayout/trigger_buttons_s.png) no-repeat 0px 0px;
+}
+
+.om-borderlayout-trigger-proxy-west{
+	border-left: 0;
+	border-right : 0;
+	left: 0;
+}
+.om-borderlayout-trigger-proxy-east{
+	border-left: 0;
+	right: 0;
+}
+.om-borderlayout-trigger-proxy-south{
+	border-top: 0;
+	bottom: 0;
+	height: 8px!important;
+}
+.om-borderlayout-trigger-proxy-north{
+	border-top: 0;
+	border-bottom: 0;
+	height: 8px!important;
+}
+
+.om-borderlayout-trigger-proxy-west .om-borderlayout-expand-trigger{
+	position: absolute;
+	left: 0;
+	width: 10px;
+	cursor: pointer;
+	-moz-border-radius: 0px 2px 2px 0px; 
+	-webkit-border-radius: 0px 2px 2px 0px; 
+	border-radius: 0px 2px 2px 0px;
+	top: 3px;
+	height: 35px;
+	opacity: .20;
+	filter:Alpha(Opacity=20);
+	background: url(images/borderlayout/trigger_buttons_we.png) no-repeat -12px 12px #000000;
+}
+.om-borderlayout-trigger-proxy-west .om-borderlayout-expand-trigger:hover{
+	opacity: 1;
+	filter:Alpha(Opacity=100);
+}
+.om-borderlayout-trigger-proxy-east .om-borderlayout-expand-trigger{
+	position: absolute;
+	right: 0;
+	width: 10px;
+	cursor: pointer;
+	-moz-border-radius: 2px 0px 0px 2px; 
+	-webkit-border-radius: 2px 0px 0px 2px; 
+	border-radius: 2px 0px 0px 2px;
+	top: 3px;
+	height: 35px;
+	opacity: .20;
+	filter:Alpha(Opacity=20);
+	background: url(images/borderlayout/trigger_buttons_we.png) no-repeat 2px 12px #000000;
+}
+.om-borderlayout-trigger-proxy-east .om-borderlayout-expand-trigger:hover{
+	opacity: 1;
+	filter:Alpha(Opacity=100);
+}
+.om-borderlayout-trigger-proxy-north .om-borderlayout-expand-trigger{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 42px;
+	height: 8px;
+	margin-left: -21px;
+	cursor: pointer;
+	background: url(images/borderlayout/trigger_buttons_s.png) no-repeat 0px 0px;
+}
+.om-borderlayout-trigger-proxy-south .om-borderlayout-expand-trigger{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 42px;
+	height: 8px;
+	margin-left: -21px;
+	cursor: pointer;
+	background: url(images/borderlayout/trigger_buttons_n.png) no-repeat 0px 0px;
+}
+.om-borderlayout-region-center .om-panel-body:first-child{
+	border: 0;
+}

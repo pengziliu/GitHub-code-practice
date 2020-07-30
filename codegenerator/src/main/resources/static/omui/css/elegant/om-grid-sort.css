@@ -1,0 +1,17 @@
+.om-grid-sortIcon{
+	display: none;
+	background-repeat: no-repeat;
+	height: 4px;
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 13px;
+    border: 0 none;
+}
+.om-grid .asc .om-grid-sortIcon{
+	background-image: url("images/grid-sort/sort_asc.gif");
+	display: inline;
+}
+.om-grid .desc .om-grid-sortIcon{
+    background-image: url("images/grid-sort/sort_desc.gif");
+    display: inline;
+}

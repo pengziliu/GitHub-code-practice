@@ -1,0 +1,17 @@
+/*
+ * $Id: om-tooltip.css,v 1.1 2012/06/12 01:25:15 licongping Exp $
+ * operamasks-ui tooltip @VERSION
+ *
+ * Copyright 2011, AUTHORS.txt (http://ui.operamasks.org/about)
+ * Dual licensed under the MIT or LGPL Version 2 licenses.
+ * http://ui.operamasks.org/license
+ *
+ * http://ui.operamasks.org/docs/
+ */
+.tip{background-color: #E9F2FF;background-image: none;border-radius: 3px 3px 3px 3px;border-style: solid;border-width: 1px;padding: 2px;border-color: #E1E1E1;position: fixed;_position : absolute;z-index:3000;}
+.tip-body{overflow: hidden;padding: 3px;position: relative;font-size: 12px;margin : 2px;}
+.tip-anchor-bottom {background-position: -9px 0px;width: 10px;}
+.tip-anchor-top {background-position: 0px 0px;width: 10px;}
+.tip-anchor-left {background-position: -28px 0px;width: 10px;}
+.tip-anchor-right {background-position: -19px 0px;width: 10px;}
+.tip-anchor{height: 10px;overflow: hidden;position: absolute;width: 9px;background-image: url("images/tooltip/tip-anchor-sprite.gif");background-repeat: no-repeat;}

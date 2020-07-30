@@ -1,0 +1,16 @@
+.om-grid div.hDiv th.group-header-1{
+	border-bottom: 1px solid #C8C4BF;
+}
+.om-grid div.hDiv th.group-header-2{
+	border-bottom: 1px solid #C8C4BF;
+}
+.om-grid div.hDiv th.group-header-3{
+	border-bottom: 1px solid #C8C4BF;
+}
+.om-grid div.hDiv th.group-header-4{
+	border-bottom: 1px solid #C8C4BF;
+}
+.om-grid div.hDiv-group-header{
+	background: none;
+	background-color:  #EFF2F7;
+}

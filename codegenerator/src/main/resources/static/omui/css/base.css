@@ -1,0 +1,168 @@
+@charset "utf-8";
+/*
+body {font-size:16px;}
+.om-button {font-size:12px;}
+#nav_cont{width:580px;margin-left:auto;margin-right:auto;}
+input {border: 1px solid #A1B9DF; vertical-align: middle;}
+input:focus{border: 1px solid #3A76C2;}
+.input_slelct {width: 81%;}
+.textarea_text {border: 1px solid #A1B9DF; height: 40px;width: 445px;}
+table.grid_layout tr td {font-weight: normal; height: 15px; padding: 5px 0; vertical-align: middle;}
+.color_red { color: red; }
+.toolbar { padding: 12px 0 5px;text-align: center; }
+.birthplace ,.address {width:445px;}
+.om-span-field input:focus {border:none;}
+.errorImg{background: url("images/msg_bg.png") no-repeat scroll 0 0 transparent;height: 16px;width: 16px;cursor: pointer;}
+input.error,textarea.error{border: 1px solid red;}
+.errorMsg{border: 1px solid gray;background-color: #FCEFE3;display: none;position: absolute;margin-top: -18px;margin-left: 18px;}
+*/
+.requireField {
+	color:red;
+	line-height: 12px;
+	padding: 5px;
+	zoom: 1;
+}
+
+
+/* ---------- Input ---------- */
+
+.input .body {
+	padding-bottom: 30px;
+}
+
+
+.input .inputTable {
+	width: 100%;
+	word-break: break-all;
+}
+.input .inputTable th {
+	width: 120px;
+	line-height: 25px;
+	padding: 5px 10px 5px 0px;
+	text-align: right;
+	font-weight: normal;
+	color: #333333;
+	border-bottom: 1px solid #dde9f5;
+	background-color: #f9fbfd;
+}
+
+.input .inputTable tr:hover {
+	background-color: #f0ebf7;
+}
+
+.input .inputTable tr:hover th {
+	background-color: #f0ebf7;
+}
+
+.input .inputTable tr.noneHover:hover {
+	background-color: #ffffff;
+}
+
+.input .inputTable tr.noneHover:hover th {
+	background-color: #ffffff;
+}
+
+.input .inputTable .title th, .input .inputTable .title td {
+	text-align: left;
+	padding-left: 5px;
+	background-color: #f0ebf7;
+}
+
+.input .inputTable td {
+	line-height: 25px;
+	padding: 5px;
+	color: #666666;
+	border-bottom: 1px solid #dde9f5;
+}
+
+.input .tableItem {
+	padding: 5px;
+}
+
+.input .tableItem .inputTable {
+	border: 1px solid #94b7d3;
+}
+
+.input .tableItem .inputTable .title {
+	font-weight: bold;
+	background-color: #ecf3f9;
+}
+
+.input .ke-container tr:hover {
+	background-color: #f0f0ee;
+}
+
+.input .ke-container td {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+.input .buttonArea {
+	padding: 10px 0px 10px 165px;
+	line-height: 25px;
+}
+
+.input .fieldTitle {
+	height: 29px;
+	line-height: 29px;
+	padding-right: 5px;
+}
+
+
+
+
+.list .listBar {
+	padding: 3px 8px;
+	clear: both;
+	background-color: #f0ebe7;
+}
+
+
+
+
+
+
+input.formText {
+	width: 180px;
+	padding: 5px;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	border-left: 1px solid #999999;
+}
+input.formText:hover {
+	border: 1px solid #ff9b1f;
+	background-color: #fefbf7;
+}
+
+input.formText:focus {
+	background-color: #fff8ef;
+}
+
+
+
+
+
+
+
+
+
+.errorMsg {
+		text-align: left;
+		color: red;
+		padding-left: 8px;
+		display: none;
+	}
+	
+	
+	
+	
+	
+.cut_word {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+}

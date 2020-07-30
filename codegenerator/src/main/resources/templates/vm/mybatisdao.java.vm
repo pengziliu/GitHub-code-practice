@@ -1,0 +1,39 @@
+package ${package.Mapper};
+
+import com.lzn.mybatisplus.codegenerator.entity.${table.entityName};
+import com.lzn.mybatisplus.codegenerator.export.${table.entityName}VO;
+import java.util.List;
+import java.util.Map;
+
+public interface ${table.mapperName}  {
+    /**
+     *  根据主键删除数据库的记录, ${table.name}
+     */
+    int deleteByPrimaryKey(Long id);
+
+    /**
+     *  新写入数据库记录, ${table.name}
+     */
+    int insert(${table.entityName} record);
+
+    /**
+     *  根据指定主键获取一条数据库记录, ${table.name}
+     */
+    ${table.entityName} selectByPrimaryKey(Long id);
+
+    /**
+     *  根据主键来更新符合条件的数据库记录, ${table.name}
+     */
+    int updateByPrimaryKey(${table.entityName} record);
+
+    /**
+     *  根据条件分页查询
+     * */
+    List<${table.entityName}VO> listForPage(Map<String,Object> searchMap);
+
+    /**
+     *  根据条件分页查询(计数)
+     * */
+    long countForPage(Map<String,Object> searchMap);
+    
+}

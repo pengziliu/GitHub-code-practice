@@ -1,0 +1,16 @@
+/*
+ * operamasks-ui buttonbar @VERSION
+ *
+ * Copyright 2011, AUTHORS.txt (http://ui.operamasks.org/about)
+ * Dual licensed under the MIT or LGPL Version 2 licenses.
+ * http://ui.operamasks.org/license
+ *
+ * http://ui.operamasks.org/docs/
+ */
+.om-buttonbar {height: 26px;_border: 1px solid #E1E1E1;background: url("images/buttonbar/buttonbar-bg.png");}
+.om-buttonbar-null {float: left;width: 20px;height: 26px;}
+.om-buttonbar .om-btn {float: left;height: 26px;}
+.om-buttonbar .om-btn .om-btn-txt{line-height: 27px\9;color: #000000;}
+.om-buttonbar .om-state-default .om-btn-bg {background: none;}
+.om-buttonbar .om-state-hover{background: url("images/buttonbar/button-hover-bg.png") !important;}
+.om-buttonbar-sep {background: url("images/buttonbar/separtor-bg.png");background-repeat: no-repeat;height: 24px;width: 2px;display: block;margin-left:2px;margin-right:2px;margin-top : 2px;float: left;overflow: hidden;}

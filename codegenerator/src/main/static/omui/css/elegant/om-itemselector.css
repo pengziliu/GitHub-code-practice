@@ -1,0 +1,133 @@
+.om-itemselector .om-itemselector-toolbar{
+    padding: 0 2px;
+    width:60px;
+}
+.om-itemselector-toolbar .om-icon{
+    margin:5px auto;
+}
+.om-itemselector .header{
+	background: url("images/itemselector/header_bg.png") repeat-x scroll 0 0 transparent;
+	border-bottom: 1px solid #E1E1E1;
+	height: 26px;
+}
+.om-itemselector .header span.checkbox{
+	margin: 5px 0 0 6px;
+}
+.om-itemselector .header span.om-itemselector-title{
+	float: left;
+	line-height: 26px;
+}
+.om-itemselector .om-itemselector-leftpanel, .om-itemselector .om-itemselector-rightpanel{
+    border: 1px solid #E1E1E1;
+}
+
+.om-itemselector .om-itemselector-items{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.om-itemselector-items dl{
+    margin: 5px 0 0;
+    padding: 0;
+}
+.om-itemselector-items dl dt{
+    padding: 0px 5px;
+    cursor: pointer;
+    height: 21px;
+    -moz-user-select: none;
+}
+
+.om-itemselector-items dt.om-state-highlight{
+    background: none repeat scroll 0 0 #B4C5DF;
+    color: #000000;
+    border: none;
+}
+
+.om-itemselector-items dt:hover{
+	background: none repeat scroll 0 0 #C4D6EC;
+}
+
+.om-itemselector span.checkbox {
+	background: url("images/itemselector/checkbox2.png");
+	width: 16px;
+	height: 16px;
+	display: block;
+	cursor: pointer;
+	float: left;
+}
+
+.om-itemselector .om-state-highlight span.checkbox , .header span.selected{
+	background: url("images/itemselector/checkbox1.png");
+	width: 16px;
+	height: 16px;
+	display: block;
+	cursor: pointer;
+	float: left;
+}
+
+.om-itemselector-up, .om-itemselector-down{
+	background: url("images/itemselector/button_bg.png") repeat-x;
+	height: 18px;
+	border: 1px solid #97A9C1;
+	display: none;
+}
+
+.om-itemselector-up:hover, .om-itemselector-down:hover{
+	background: url("images/itemselector/button_bg_hover.png") repeat-x;
+	border: 1px solid #738BAC;
+}
+.om-itemselector-up-disabled, .om-itemselector-down-disabled,
+.om-itemselector-up-disabled:hover, .om-itemselector-down-disabled:hover{
+	background: url("images/itemselector/button_bg_disabled.png") repeat-x;
+	border: 1px solid #AFAFAF;
+}
+
+.om-itemselector-up span.upbtn{
+	background:url("images/itemselector/up.png") no-repeat center center;
+	height:20px;
+	display: block;
+	cursor: pointer;
+}
+
+.om-itemselector-up-disabled span.upbtn{
+	background:url("images/itemselector/up_disable.png") no-repeat center center;
+	height:20px;
+	display: block;
+	cursor: auto;
+}
+
+.om-itemselector-down span.downbtn{
+	background:url("images/itemselector/down.png") no-repeat center center;
+	height:20px;
+	display: block;
+	cursor: pointer;
+}
+
+.om-itemselector-down-disabled span.downbtn{
+	background:url("images/itemselector/down_disable.png") no-repeat center center;
+	height:20px;
+	display: block;
+	cursor: auto;
+}
+.om-itemselector-toolbar .om-icon{
+    width:30px;
+    height:30px;
+    cursor: pointer;
+}
+.om-itemselector-toolbar .om-itemselector-tbar-space{
+    background: none;
+    height: 10px;
+}
+
+.om-itemselector-tbar-add{
+    background-image: url("images/itemselector/add.png");
+}
+.om-itemselector-tbar-remove{
+    background-image: url("images/itemselector/remove.png");
+}
+.om-itemselector-tbar-add:hover{
+    background-image: url("images/itemselector/add_hover.png");
+}
+.om-itemselector-tbar-remove:hover{
+    background-image: url("images/itemselector/remove_hover.png");
+}

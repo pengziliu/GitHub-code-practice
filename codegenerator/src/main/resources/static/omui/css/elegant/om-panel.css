@@ -1,0 +1,102 @@
+/*
+ * $Id: om-panel.css,v 1.4 2012/06/27 09:10:27 licongping Exp $
+ * operamasks-ui panel @VERSION
+ *
+ * Copyright 2011, AUTHORS.txt (http://ui.operamasks.org/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://ui.operamasks.org/license
+ *
+ * http://ui.operamasks.org/docs/
+ */
+.om-panel{
+	overflow: hidden;
+}
+.om-panel-header{
+ 	padding: 5px;
+ 	height: 12px;
+ 	line-height: 12px;
+ 	background: url("images/panel/om-panel-header-bg-d.png") repeat-x scroll 0 0 #FFFFFF;
+ 	border:1px solid #E1E1E1;
+ 	position: relative;
+ 	cursor: default;
+ }
+.om-panel-body{
+ 	background-image: none;
+ 	border-top-width: 0;
+ 	padding: 1em;
+ 	overflow: auto;
+}
+.helpMsg .om-panel-header{
+ 	padding: 5px;
+ 	height: 10px;
+ 	background: url("images/panel/om-panel-header-bg-help-d.jpg") repeat-x scroll 0 0 #FFFFFF;
+ 	border:1px solid #C1C1C1;
+ 	position: relative;
+}
+.helpMsg .om-panel-body{
+	background-color: #EEEEEE;
+	color: #5F5F5F;
+}
+.om-panel-noheader{
+ 	border-top-width:1px;
+}
+.om-panel-title{
+	white-space: nowrap;
+	overflow: hidden;
+}
+.om-panel-icon{
+	float: left;
+	background-image: none;
+	width:20px;
+	height:16px;
+}
+.om-panel-tool{
+	position: absolute;
+	right: 5px;
+	top: 3px;
+}
+.om-panel-tool div.om-icon{
+	float:left;
+	margin-left:2px;
+	cursor:pointer;
+	width: 20px;
+	height: 18px;
+	line-height: 18px;
+	display:block;
+}
+.om-panel-loadingMessage{
+	background-color: white;
+    left: 0;
+    opacity: .8; filter:Alpha(Opacity=80);
+    position: absolute;
+    top: 0;
+    z-index:100;
+}
+.om-panel-loadingMessage .valignMiddle{
+	left: 50%;
+   	margin-left: -30px;
+   	margin-top: -8px;
+   	position: absolute;
+   	top: 50%;
+}
+.om-panel-loadingMessage .loadingImg{
+	background: url("images/load.gif") repeat scroll 0 0 transparent;
+    height: 16px;
+    padding-left:20px;
+    background-repeat: no-repeat;
+}
+.om-panel-tool-collapse{
+	background: url("images/panel/up_panel.png") no-repeat center center transparent
+}
+.om-panel-tool-expand{
+	background: url("images/panel/down_panel.png") no-repeat center center transparent
+}
+.om-panel-tool-min{
+	background: url("images/panel/min_panel.png") no-repeat center center transparent
+}
+.om-panel-tool-max{
+	background: url("images/panel/max_panel.png") no-repeat center center transparent
+}
+.om-panel-tool-close{
+	background: url("images/panel/close_panel.png") no-repeat center center transparent
+}

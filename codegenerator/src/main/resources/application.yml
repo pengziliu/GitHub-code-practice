@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath:mybatis/*Mapper.xml
+  type-aliases-package: com.lzn.mybatisplus.codegenerator.entity
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.0.1:3306/myProject?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 192.168.0.1
+    password: 123456
+    port: 6379
+  freemarker:
+    template-loader-path: classpath:/templates/pages/
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    suffix: .ftl
+    request-context-attribute: request

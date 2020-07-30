@@ -1,0 +1,40 @@
+package com.lzn.mybatisplus.codegenerator.export;
+
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import com.lzn.mybatisplus.codegenerator.utils.export.ExportRowCreator;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
+
+/**
+ * $!{tablecomment} 视图对象
+ * @author: ${author}
+ * @date ${date}
+ * */
+@Getter
+@Setter
+@ToString
+public class ${entity}VO implements ExportRowCreator, Serializable {
+
+
+    #foreach($field in ${table.fields})
+        /**
+         * 数据库字段名 ${field.name} 类型 ${field.type}
+         */
+        private ${field.propertyType}  ${field.propertyName};
+
+    #end
+
+
+    @Override
+    public String[] createRow() {
+        String[] row = new String[]{
+            #foreach($field in ${table.fields})get${field.capitalName}().toString()#if($foreach.hasNext),#end#end
+        };
+        return row;
+    }
+}

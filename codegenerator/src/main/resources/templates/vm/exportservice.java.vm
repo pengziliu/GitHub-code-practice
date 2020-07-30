@@ -1,0 +1,122 @@
+package com.lzn.mybatisplus.codegenerator.export;
+
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Component;
+import com.lzn.mybatisplus.codegenerator.utils.ParameterUtil;
+import com.lzn.mybatisplus.codegenerator.utils.export.AbstractCSVExportService;
+import com.lzn.mybatisplus.codegenerator.dao.${table.mapperName};
+import com.lzn.mybatisplus.codegenerator.export.${table.entityName}VO;
+import com.lzn.mybatisplus.codegenerator.utils.entity.*;
+
+import javax.annotation.Resource;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * <p>
+ * $!{tablecomment} 导出
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+#set ($exportVO = ${entity}+"VO")
+@Component
+public class ${entity}ExportService extends AbstractCSVExportService<${exportVO}> {
+
+    @Resource
+    private ${table.mapperName} ${table.entityPath}MybatisDao;
+
+    Map<String, Object> searchMap;
+
+    @Override
+    public void prepareExport(Map<String, Object> parameterMap) {
+        searchMap = ParameterUtil.getParametersStartingWith(parameterMap,"filter_");
+        Iterator<String> iterator = searchMap.keySet().iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            String value = (String) searchMap.get(key);
+            if (StringUtils.isEmpty(value)) {
+                iterator.remove();
+                continue;
+            }
+        }
+    }
+
+    @Override
+    public int queryTotal() {
+        Long count = ${table.entityPath}MybatisDao.countForPage(searchMap);
+        return Integer.valueOf(count.toString());
+    }
+
+    @Override
+    public List<${exportVO}> queryList(int start, int size) {
+        searchMap.put("start", start);
+        searchMap.put("limit", size);
+        List<${exportVO}> resultList  = ${table.entityPath}MybatisDao.listForPage(searchMap);
+        return resultList;
+    }
+
+    @Override
+    public String[] getTableHead() {
+            String[] head = new String[]{
+                #foreach($field in ${table.fields})
+                    #set($comment = "")
+                    #set($type = "")
+                    #set($isNullAble = true)
+                    #set($defaultValue = false)
+                    #set($listIsShow = true)
+                    #set($listIsSearch = false)
+                    #foreach( $e in $field.comment.split(","))
+                        #if( $foreach.count == 1 )
+                            #set($comment = $e)
+                        #elseif( $foreach.count == 2 )
+                            #set($type = $e)
+                        #elseif( $foreach.count == 3)
+                            #if($e == "YES")
+                                #set($isNullAble = true)
+                            #else
+                                #set($isNullAble = false)
+                            #end
+                        #elseif( $foreach.count == 4)
+                            #if($e == "true")
+                                #set($defaultValue = true)
+                            #else
+                                #set($defaultValue = false)
+                            #end
+                        #elseif( $foreach.count == 5)
+                            #if($e == "true")
+                                #set($listIsShow = true)
+                            #else
+                                #set($listIsShow = false)
+                            #end
+                        #elseif( $foreach.count == 6)
+                            #if($e == "true")
+                                #set($listIsSearch = true)
+                            #else
+                                #set($listIsSearch = false)
+                            #end
+                        #end
+                    #end
+                    #if(${field.keyFlag})
+                        #set($keyPropertyName=${field.propertyName})
+                    #end
+                        "${comment}"#if($foreach.hasNext),#end
+                #end
+            };
+
+        return head;
+    }
+
+    @Override
+    public String getFileName() {
+        return "$!{tablecomment}";
+    }
+
+    @Override
+    public Class<${exportVO}> getClazz() {
+        return ${exportVO}.class;
+    }
+}

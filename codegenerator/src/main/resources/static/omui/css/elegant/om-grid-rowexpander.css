@@ -1,0 +1,13 @@
+.om-grid .bDiv .expenderCol div{
+    background: url("images/grid-rowexpander/grid-row-expand-sprite.gif") no-repeat scroll 5px 5px transparent;
+    height:14px;
+}
+.om-grid .bDiv .expenderCol div.rowExpand-expanded{
+    background-position: -19px 5px;
+}
+
+.om-grid tr.rowExpand-rowDetails div.rowExpand-rowDetails-content{
+    border: 1px solid #BDCBE8;
+    border-width : 1px 0;
+    white-space : normal;
+}

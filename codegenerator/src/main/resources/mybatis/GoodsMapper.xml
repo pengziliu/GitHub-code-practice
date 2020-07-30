@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzn.mybatisplus.codegenerator.dao.GoodsMybatisDao">
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.lzn.mybatisplus.codegenerator.entity.Goods">
+                    <result column="id" property="id" />
+                    <result column="goods_sn" property="goodsSn" />
+                    <result column="name" property="name" />
+                    <result column="title" property="title" />
+                    <result column="price" property="price" />
+                    <result column="status" property="status" />
+                    <result column="sale_count" property="saleCount" />
+                    <result column="create_date" property="createDate" />
+                    <result column="modify_date" property="modifyDate" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+        id, goods_sn AS goodsSn, name, title, price, status, sale_count AS saleCount, create_date AS createDate, modify_date AS modifyDate
+        </sql>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        <!-- -->
+        delete from test_goods
+        where
+    </delete>
+
+    <insert id="insert" parameterType="com.lzn.mybatisplus.codegenerator.entity.Goods">
+        <!-- -->
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into test_goods (
+                id,                goods_sn,                name,                title,                price,                status,                sale_count,                create_date,                modify_date        )
+        values (
+                #{ id},                #{ goodsSn},                #{ name},                #{ title},                #{ price},                #{ status},                #{ saleCount},                #{ createDate},                #{ modifyDate}        )
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="com.lzn.mybatisplus.codegenerator.entity.Goods">
+        <!-- -->
+        update test_goods
+        set
+               id = #{ id} ,               goods_sn = #{ goodsSn} ,               name = #{ name} ,               title = #{ title} ,               price = #{ price} ,               status = #{ status} ,               sale_count = #{ saleCount} ,               create_date = #{ createDate} ,               modify_date = #{ modifyDate}         where
+    </update>
+
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        <!-- -->
+        select
+        <include refid="Base_Column_List" />
+        from test_goods
+        where id = #{ id }
+    </select>
+
+    <select id="countForPage" parameterType="map" resultType="Long">
+        <!-- -->
+        select
+         count(*)
+        from
+        test_goods
+        where 1=1
+        <if test="beginDate != null and beginDate != ''">
+            and create_date <![CDATA[>=]]>  #{beginDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            and  create_date <![CDATA[<=]]> #{endDate}
+        </if>
+    </select>
+
+    <select id="listForPage" parameterType="map" resultType="com.lzn.mybatisplus.codegenerator.export.GoodsVO">
+        <!-- -->
+        select
+        <include refid="Base_Column_List" />
+        from
+        test_goods
+        where 1=1
+        <if test="beginDate != null and beginDate != ''">
+            and create_date <![CDATA[>=]]>  #{beginDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            and  create_date <![CDATA[<=]]> #{endDate}
+        </if>
+        limit #{start}, #{limit}
+    </select>
+
+</mapper>

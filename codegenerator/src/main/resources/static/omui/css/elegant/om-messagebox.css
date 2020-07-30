@@ -1,0 +1,42 @@
+/*
+ * $Id: om-messagebox.css,v 1.16 2012/03/12 03:15:13 wangfan Exp $
+ * operamasks-ui messageBox @VERSION
+ *
+ * Copyright 2011, AUTHORS.txt (http://ui.operamasks.org/about)
+ * Dual licensed under the MIT or LGPL Version 2 licenses.
+ * http://ui.operamasks.org/license
+ *
+ * http://ui.operamasks.org/docs/
+ */
+div.om-messageBox { position: absolute; width: 300px; overflow: hidden; outline:0; border: 1px solid #E1E1E1; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;}
+.om-messageBox .om-messageBox-titlebar { height: 28px; position: relative; border-radius: 4px 4px 0 0; background: url("images/messagebox/title-bg.png") repeat-x scroll 0 0 transparent; border: none; border-bottom: 1px solid #E1E1E1;}
+.om-messageBox .om-messageBox-title { float: left; margin: 0.5em 16px 0.1em 0.5em; }
+
+.om-messageBox .om-messageBox-titlebar-close { position: absolute; right: .3em; top: 50%; width: 22px; margin: -12px 0 0 0; padding: 1px; height: 18px; }
+.om-messageBox .om-messageBox-titlebar-close span { display: block; margin: 1px; }
+.om-messageBox .om-messageBox-titlebar-close:hover, .om-messageBox .om-messageBox-titlebar-close:focus { border:none; color: #222222; background-color: transparent }
+.om-messageBox .om-icon-closethick {background-image: url("images/ui-toolbar-btn.png") !important;_background-image: url("images/ui-toolbar-btn.gif") !important;background-position: -88px 0!important;width: 22px; height: 18px;}
+.om-messageBox .om-icon-closethick:hover{background-position: -88px -36px!important;}
+.om-messageBox .om-state-mousedown .om-icon-closethick{background-position: -88px -18px!important;}
+
+.om-messageBox .om-messageBox-content { position: relative; border:none; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
+.om-messageBox .om-messageBox-buttonpane { text-align: center; border-width: 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; border-color: #86A3C4; }
+.om-messageBox .om-messageBox-buttonpane button { cursor: pointer; }
+.om-messageBox .om-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .om-messageBox-titlebar { cursor: move; }
+
+.om-messageBox-content table{ table-layout: fixed; width: 276px }
+.om-message-content-html{ word-wrap: break-word; word-break: break-all; }
+.om-message-content-html input{ height: 18px; width: 206px }
+.om-messageBox-imageTd{ width: 32px; height: 32px; }
+
+
+.om-messageBox-image{ background: none no-repeat scroll 0 0 transparent; position: absolute; top: 10px; left: 10px; overflow: hidden; height: 32px; width: 32px; }
+.om-messageBox-image-success{ background: url("images/messagebox/messagebox-icons.gif") -128px 0px; }
+.om-messageBox-image-error{ background: url("images/messagebox/messagebox-icons.gif") -64px 0px;}
+.om-messageBox-image-warning{ background: url("images/messagebox/messagebox-icons.gif") -96px 0px;}
+.om-messageBox-image-confirm{ background: url("images/messagebox/messagebox-icons.gif") -32px 0px; }
+.om-messageBox-image-question{ background: url("images/messagebox/messagebox-icons.gif") -32px 0px; }
+.om-messageBox-image-alert{ background: url("images/messagebox/messagebox-icons.gif") 0px 0px;}
+.om-messageBox-image-prompt{ background: url("images/messagebox/messagebox-icons.gif") -160px 0px; }
+.om-messageBox-image-waiting{ background-image: url("images/messagebox/waiting.gif"); }

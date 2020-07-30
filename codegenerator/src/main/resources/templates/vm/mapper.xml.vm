@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${package.Mapper}.${table.mapperName}">
+    #if(${baseResultMap})
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="${package.Entity}.${entity}">
+            #foreach($field in ${table.fields})
+                #if(${field.keyFlag})##生成主键排在第一位
+                    <id column="${field.name}" property="${field.propertyName}" />
+                #end
+            #end
+            #foreach($field in ${table.commonFields})##生成公共字段
+                <result column="${field.name}" property="${field.propertyName}" />
+            #end
+            #foreach($field in ${table.fields})
+                #if(!${field.keyFlag})##生成普通字段
+                    <result column="${field.name}" property="${field.propertyName}" />
+                #end
+            #end
+        </resultMap>
+    #end
+
+    #if(${baseColumnList})
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+        #foreach($field in ${table.commonFields})
+            #if(${field.name} == ${field.propertyName})${field.name}#else${field.name} AS ${field.propertyName}#end,
+        #end
+        ${table.fieldNames}
+        </sql>
+    #end
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        <!-- -->
+        delete from ${table.name}
+        where
+        #foreach($field in ${table.fields})
+            #if(${field.keyFlag})## 主键
+                ${field.name} = #{ ${field.propertyName} }
+            #end
+        #end
+    </delete>
+
+    <insert id="insert" parameterType="${package.Entity}.${entity}">
+        <!-- -->
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into ${table.name} (
+        #foreach($field in ${table.fields})
+            #if(!${field.keyFlag})##生成普通字段
+                ${field.name}#if($foreach.hasNext),#end
+            #end
+        #end
+        )
+        values (
+        #foreach($field in ${table.fields})
+            #if(!${field.keyFlag})##生成普通字段
+                #{ ${field.propertyName}}#if($foreach.hasNext),#end
+            #end
+        #end
+        )
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="${package.Entity}.${entity}">
+        <!-- -->
+        update ${table.name}
+        set
+        #foreach($field in ${table.fields})
+            #if(!${field.keyFlag})##生成普通字段
+               ${field.name} = #{ ${field.propertyName}} #if($foreach.hasNext),#end
+            #end
+        #end
+        where
+        #foreach($field in ${table.fields})
+            #if(${field.keyFlag})
+              id = #{ ${field.name} }
+            #end
+        #end
+    </update>
+
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        <!-- -->
+        select
+        <include refid="Base_Column_List" />
+        from ${table.name}
+        where id = #{ id }
+    </select>
+
+    <select id="countForPage" parameterType="map" resultType="Long">
+        <!-- -->
+        select
+         count(*)
+        from
+        ${table.name}
+        where 1=1
+        <if test="beginDate != null and beginDate != ''">
+            and create_date <![CDATA[>=]]>  #{beginDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            and  create_date <![CDATA[<=]]> #{endDate}
+        </if>
+    </select>
+
+    <select id="listForPage" parameterType="map" resultType="com.lzn.mybatisplus.codegenerator.export.${table.entityName}VO">
+        <!-- -->
+        select
+        <include refid="Base_Column_List" />
+        from
+        ${table.name}
+        where 1=1
+        <if test="beginDate != null and beginDate != ''">
+            and create_date <![CDATA[>=]]>  #{beginDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            and  create_date <![CDATA[<=]]> #{endDate}
+        </if>
+        limit #{start}, #{limit}
+    </select>
+
+</mapper>

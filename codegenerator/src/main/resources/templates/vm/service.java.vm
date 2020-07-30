@@ -1,0 +1,50 @@
+package ${package.Service};
+
+
+
+import org.springframework.stereotype.Service;
+import com.lzn.mybatisplus.codegenerator.dao.${table.mapperName};
+import com.lzn.mybatisplus.codegenerator.utils.entity.GridDataModel;
+import com.lzn.mybatisplus.codegenerator.utils.entity.OmuiPage;
+import com.lzn.mybatisplus.codegenerator.export.${table.entityName}VO;
+
+import javax.annotation.Resource;
+import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+
+/**
+ * <p>
+ * $!{tablecomment} 服务类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+public class ${table.serviceName} {
+
+    @Resource
+    private ${table.mapperName} ${table.entityPath}Dao;
+
+    /**
+     * 分页查询
+     * */
+    public GridDataModel<${table.entityName}VO>  findByPage(Map<String, Object> searchParams, OmuiPage page){
+        GridDataModel<${table.entityName}VO> gm = new GridDataModel<${table.entityName}VO>();
+        searchParams.put("start", page.getStart());
+        searchParams.put("limit", page.getLimit());
+        long count = ${table.entityPath}Dao.countForPage(searchParams);
+        List<${table.entityName}VO> list = ${table.entityPath}Dao.listForPage(searchParams);
+        gm.setTotal(count);
+        gm.setRows(list);
+        return gm;
+    }
+
+
+
+}
+

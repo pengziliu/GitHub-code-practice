@@ -1,0 +1,28 @@
+package ${package.Entity};
+
+import java.math.BigDecimal;
+import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+/**
+ * 数据库表名 ${table.name}
+ *
+ * @author ${author}
+ * @date ${date}
+ */
+@Getter
+@Setter
+@ToString
+public class ${table.entityName}  {
+
+    #foreach($field in ${table.fields})
+    /**
+     * 数据库字段名 ${field.name} 类型 ${field.type}
+     */
+    private ${field.propertyType}  ${field.propertyName};
+
+    #end
+
+}

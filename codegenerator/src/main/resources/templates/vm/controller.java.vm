@@ -1,0 +1,62 @@
+
+package ${package.Controller};
+
+import ${package.Entity}.${entity};
+import ${package.Service}.${table.serviceName};
+import com.lzn.mybatisplus.codegenerator.export.${table.entityName}VO;
+import com.lzn.mybatisplus.codegenerator.export.${table.entityName}ExportService;
+import com.lzn.mybatisplus.codegenerator.utils.entity.*;
+import com.lzn.mybatisplus.codegenerator.utils.export.*;
+import org.apache.commons.beanutils.ConvertUtils;
+import com.lzn.mybatisplus.codegenerator.utils.ParameterUtil;
+import com.lzn.mybatisplus.codegenerator.utils.entity.GridDataModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import javax.annotation.Resource;
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * <p>
+ * ${tablecomment}  前端控制器
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Controller
+@RequestMapping(value="/admin/${table.entityPath}")
+public class ${table.controllerName}{
+    private static Logger logger = LoggerFactory.getLogger(${table.controllerName}.class);
+
+    @Resource
+    private ${entity}Service ${table.entityPath}Service;
+
+
+
+    @RequestMapping(value = "list", method = RequestMethod.GET)
+    public String list(Model model){
+        return "/admin/${cfg.pageDirName}/list";
+    }
+
+    @RequestMapping(value = "searchList", method = RequestMethod.POST)
+    @ResponseBody
+    @ExportMethod(serviceClass = ${entity}ExportService.class, memo = "明细导出")
+    public String searchList(ServletRequest request,@ModelAttribute("page")  OmuiPage page){
+        try {
+            Map<String,Object> searchParam =	 ParameterUtil.getParametersStartingWith(request, "filter_");
+            GridDataModel<${entity}VO> gd =${table.entityPath}Service.findByPage(searchParam, page);
+            return JsonMapper.nonDefaultMapper().toJson(gd);
+        } catch (Exception e) {
+            logger.error("查询出错了",e);
+            return JsonMapper.nonDefaultMapper().toJson(new Resp("false", e.getMessage()));
+        }
+    }
+
+
+}

@@ -1,0 +1,300 @@
+﻿@charset "utf-8";
+
+
+/* ---------- Common ---------- */
+
+#search-panel span.label{
+	margin-left: 10px;
+	display:inline-block;
+	text-align:right;
+	width:60px;
+}
+
+#search-panel span.label_plus{
+    margin-left: 10px;
+    display:inline-block;
+    text-align:right;
+    width:80px;
+}
+#search-panel .input-text {
+    border: 1px solid #ccc;
+    height: 18px;
+    vertical-align: middle;
+    width: 137px;
+}
+
+#search-panel .input-select {
+    border: 1px solid #ccc;
+    height: 24px;
+    vertical-align: middle;
+    width: 142px;
+}
+
+#search-panel span.om-combo,#search-panel span.om-calendar{
+	vertical-align: middle;
+}
+
+html {display: table;}
+
+/*--------------表单错误样式*/
+input.error { border : 1px dotted red; }
+  
+  
+label.error {
+    //background:url("${base}/static/img/messagebox-icons.gif") no-repeat 30px 12px;
+    padding-left: 16px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    color: #EA5200;
+}
+
+/*----------审核弹出框样式------------*/
+.audited-imageTd { 
+	width: 32px; 
+	height: 32px; 
+}
+.audited-image { 
+	background: none no-repeat scroll 0 0 transparent; 
+	top: 10px; 
+	left: 10px; 
+	overflow: hidden; 
+	height: 32px; 
+	width: 32px; 
+}
+.audited-image-prompt { 
+	background: url("../../omui/css/elegant/images/messagebox/messagebox-icons.gif") -160px 0px; 
+}
+
+.audited-content-html { 
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+
+.label-warning{
+width:80px;
+background-color:#f89406;
+font-weight:normal;color:red;
+}
+
+/* 弹框样式 */
+/* structural elements 结构元素 */
+body, h1, h2, h3, h4, h5, h6, hr, p, 
+/* list elements 列表元素 */
+dl, dt, dd, ul, ol, li,
+/* form elements 表单元素 */
+form, fieldset, legend, button, input, textarea,
+/* img elements 图片元素 */
+img {margin: 0; padding: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+em, i{font-style:normal;}
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/*清除浮动设置*/
+.clearfix:before,
+.clearfix:after { content:"."; display:block; height:0px; visibility:hidden;}
+.clearfix:after { clear:both;}
+.clearfix { zoom:1;} /*IE<8*/
+
+/*****   公共样式  ******/
+/*浮动公用样式*/
+.fl {float:left;}
+.fr {float:right;}
+
+/*文字超出框显示省略号*/
+.Omit {white-space:nowrap;text-overflow:ellipsis;}
+
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.btn.active.focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn:active:focus,.btn:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.btn.focus,.btn:focus,.btn:hover {
+    color: #333;
+    text-decoration: none
+}
+
+.btn.active,.btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125)
+}
+
+.btn.disabled,.btn[disabled],fieldset[disabled] .btn {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc
+}
+
+.btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active,.open>.dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+
+.btn-default:active,.btn-default.active,.open>.dropdown-toggle.btn-default {
+    background-image: none
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd
+}
+
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #3071a9;
+    border-color: #285e8e
+}
+
+.btn-primary:active,.btn-primary.active,.open>.dropdown-toggle.btn-primary {
+    background-image: none
+}
+
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c
+}
+
+.btn-success:hover,.btn-success:focus,.btn-success:active,.btn-success.active,.open>.dropdown-toggle.btn-success {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439
+}
+
+.btn-success:active,.btn-success.active,.open>.dropdown-toggle.btn-success {
+    background-image: none
+}
+
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+
+.btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.active,.open>.dropdown-toggle.btn-info {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc
+}
+
+.btn-info:active,.btn-info.active,.open>.dropdown-toggle.btn-info {
+    background-image: none
+}
+
+.btn-info .badge {
+    color: #5bc0de;
+    background-color: #fff
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236
+}
+
+.btn-warning:hover,.btn-warning:focus,.btn-warning:active,.btn-warning.active,.open>.dropdown-toggle.btn-warning {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512
+}
+
+.btn-warning:active,.btn-warning.active,.open>.dropdown-toggle.btn-warning {
+    background-image: none
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a
+}
+
+.btn-danger:hover,.btn-danger:focus,.btn-danger:active,.btn-danger.active,.open>.dropdown-toggle.btn-danger {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925
+}
+
+.btn-danger:active,.btn-danger.active,.open>.dropdown-toggle.btn-danger {
+    background-image: none
+}
+ 
+
+.btn-link {
+    font-weight: 400;
+    color: #428bca;
+    cursor: pointer;
+    border-radius: 0
+}
+
+.btn-link,.btn-link:active,.btn-link[disabled],fieldset[disabled] .btn-link {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.btn-link,.btn-link:hover,.btn-link:focus,.btn-link:active {
+    border-color: transparent
+}
+
+.btn-link:hover,.btn-link:focus {
+    color: #2a6496;
+    text-decoration: underline;
+    background-color: transparent
+}
+
+.btn-link[disabled]:hover,fieldset[disabled] .btn-link:hover,.btn-link[disabled]:focus,fieldset[disabled] .btn-link:focus {
+    color: #777;
+    text-decoration: none
+}
+
+/* 上传文件 input */
+.file-update {position: relative;}
+.file-name {font-size: 14px;}
+.file-loc {position: absolute; left: 0px; height: 30px; width: 100%; bottom: 0; opacity: 0; filter: alpha(opacity=0);}
+
+/* 标题 */
+.titleStyle {font-size: 18px; font-weight: bold; margin:10px 5px; display: inline-block;}
+
+.hc_row {margin: 10px 0;}
+
+
+/* 可拖动滚动条 */
+.tab-content iframe {overflow-x: scroll;}

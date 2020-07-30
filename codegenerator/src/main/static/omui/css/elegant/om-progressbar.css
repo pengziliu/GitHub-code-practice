@@ -1,0 +1,12 @@
+/*
+ * jQuery UI Progressbar 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.om-progressbar { height:14px; }
+.om-progressbar .om-progressbar-value {height:100%;background:#e4f0fb; }
+.om-progressbar .om-progressbar-text {text-align: center; position: absolute;}
