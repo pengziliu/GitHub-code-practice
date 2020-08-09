@@ -1,30 +1,30 @@
 package com.example.demo.controller;
 
 import com.alibaba.excel.EasyExcel;
-import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.example.demo.model.UserExcelModel;
-import com.example.demo.utils.ExcelUtils;
+import com.example.demo.utils.ValidationUtils;
+import com.example.demo.vo.UserExcelVO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.formula.functions.T;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
+import javax.validation.ConstraintViolation;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/user")
@@ -123,13 +123,69 @@ public class UserController {
         return list;
     }
 
-    public static class ModelExcelListener extends AnalysisEventListener {
-        private List<Object> datas = new ArrayList<>();
+    @PostMapping("/importExcel")
+    public UserExcelVO importExcel(@RequestParam("file") MultipartFile file){
+        List<UserExcelModel> list = null;
+        List<UserExcelModel> fail = new ArrayList<>();
+        UserExcelVO userExcelVO = new UserExcelVO();
+        String mobieReg = "^[1][3,4,5,7,8][0-9]{9}$$";
+        try {
+            list = EasyExcel.read(file.getInputStream(),UserExcelModel.class,new ModelExcelListener()).sheet().doReadSync();
+
+            list.forEach(data->{
+                //处理姓名的校验
+                if(StringUtils.isEmpty(data.getName())||data.getName().length()> 4 ){
+                    fail.add(data);
+                    return;
+                }
+                //处理手机号的校验
+                if (StringUtils.isEmpty(data.getMobile())|| !data.getMobile().matches(mobieReg)) {
+                    fail.add(data);
+                    return;
+                }
+                //以下根据字段多少可能有n个if
+            });
+            userExcelVO.setFail(fail);
+            list.removeAll(fail);
+            userExcelVO.setSuccess(list);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return userExcelVO;
+    }
+
+
+    @PostMapping("/v2/importExcel")
+    public UserExcelVO importExcelV2(@RequestParam("file") MultipartFile file){
+        List<UserExcelModel> list = null;
+        List<UserExcelModel> fail = new ArrayList<>();
+        UserExcelVO userExcelVO = new UserExcelVO();
+        try {
+            list = EasyExcel.read(file.getInputStream(),UserExcelModel.class,new ModelExcelListener()).sheet().doReadSync();
+            list.forEach(data->{
+                Set<ConstraintViolation<UserExcelModel>> violations  =  ValidationUtils.getValidator().validate(data);
+                if(violations.size()>0){
+                    fail.add(data);
+                }
+            });
+            userExcelVO.setFail(fail);
+            list.removeAll(fail);
+            userExcelVO.setSuccess(list);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return userExcelVO;
+    }
+
+
+
+    public static class ModelExcelListener extends AnalysisEventListener<UserExcelModel> {
+        private List<UserExcelModel> datas = new ArrayList<>();
         /**
          * 通过 AnalysisContext 对象还可以获取当前 sheet，当前行等数据
          */
         @Override
-        public void invoke(Object data, AnalysisContext context) {
+        public void invoke(UserExcelModel data, AnalysisContext context) {
             //数据存储到list，供批量处理，或后续自己业务逻辑处理。
             log.info("读取到数据{}",data);
             datas.add(data);
